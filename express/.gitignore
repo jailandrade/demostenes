@@ -12,7 +12,6 @@ Desktop.ini
 .directory
 *~
 
-
 # npm
 node_modules
 package-lock.json
@@ -28,3 +27,5 @@ benchmarks/graphs
 
 .sass-cache/
 *.css.map
+
+.env
