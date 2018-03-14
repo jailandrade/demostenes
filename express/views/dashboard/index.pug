@@ -1,95 +1,26 @@
 extends ../layout
 
 block content
-  .dashboard
-    aside.sidebar
-      .top
-        h1 Demostenes
-      .description
-        p Hecho por 
-        h2 Jail
-      .items
-        a(href="/dashboard") Dashboard
-        a(href="/items") Items
-        a(href="/item") Item
-        a(href="/users") Users
-        a(href="/user") User
-        a(href="/graphs") Graphs
-        a(href="/profie") Profile
-      .bottom
-        a(href="/report") Report a bug
-    main.content
-      .top
-        .left
-          p A text in the left
-        .right
-          p The icon in the right
-      .items
-        h1.items-title A title for these items
-        .items-grid
-          .item
-            .item-info
-              img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAA5FBMVEUAAAB/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1Kf373AAAAS3RSTlMAAQIDBAUGBwkMDRARFiAhIyQuMTIzNTY3OD0+QERFSUtMTVFrcHFzdHV3eX5/gIyVl6OmtLW3ur7AwcPFx8jR09XX2d7g4ujt7/HgnHODAAAA5UlEQVQoz3VS1RbCMAwNsg4dw91lyHAYXtz//3/YgKwFRh56knuTGzkFeJkr3VteD6NqwAa8ieqy5HOCTQw2dzEOl7dh0xdaAwf6qQnhy2P0HUqTT12QtScgbAh8WVEx3loUEy9JZGZuAEIxit/L6EodgETJVHAysQNA1wcWpvphZseAniqsfQjOTOneYrtk/xNzuxWhS7HmPKE3Z+PyhD4uWVkQxoJQw5PT0z73dqce44jrnyPmlVed9nX2AAIpTeDxCDUlgpuQCQuNoYMlie1Fwat/BiLXd4lPXVemT2/HsSJjvwcR+xXA+PPomQAAAABJRU5ErkJggg==", alt="Item information icon")
-            .item-icon
-              img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAABxVBMVEUAAAAhq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq83FuPSKAAAAlnRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRscHR4fICEjJCUnKCwtLzAxMzY5Ojs9Pj9BQkNESUtMT1BRVVZXW1xdX2JjZmdpa2xtb3Bxc3R1eHl7fH+AgoOFiImLjI6Ul5iam52io6aoqqutr7K0tbe5ury+wMHDxcjKzM7P0dPV19rc3uDi5Obo6evt7/Hz9ff5+/1cD2ZRAAACO0lEQVQ4jX2T/T9TYRjGv2dnM2zZYlTWC5aXiqSolBBJIb0oIVIpkkSkomSj5aXNXs/99/bD2eFMm+uX57qf8/1c9/N87ucAKBcng9Ffzyswy97ycSuy0utOlc61pQsu5+lhmTcxvuTGFU/+ie5kJwB5oR4A7ia95qSJbQeAe+s+wOIrANqkWs/1dwCgzG3kAhRpFeDT7ADXpBHA7n0rUuVSAPXHmg2gZxmGxgHq5TbYWlZEQt8DSYmOnAF7cFkFCsSJvxGokXEsXYmZq0cAUMv7dr6UclQWLEC8mlgNVGihUH1gusR0bsuN3f6nsdgHBdYb2LiEN/HSEkjWkS7brNQdj75TiJ5jbKA49oLOzWLjo3pe0Y3yOJhXEhl3iJvKcHiYy3+dewluyTHsw1XVs/v7J7A4iCt5kkwQ70cpDFUCObBwj8yQPVZGrm59ETULROuS4Sa7yAZZNU/KSFFWiAn9FVAeJTvU9FVfm+cOgU5p+to3eghUkKoGnx0C5Us+AA/0JEXV5T2QZAeg9RMAA2Io7UyiT7JOv53jmCFz86aIkVhIVr0ZS5nNO1kZq1abch1ps0vTrbg15Wzx7iyMPbrfpENKM0NTYdueVxZ2HJmYXjlrqvK0P0X/M/3yxFxej4cTtQcQ24xsrVv3a59UOVZlymNClOawtFs+zyrGhivaBkqfyHSj/tOoZT3b4veCLThkQPP6hF0jmojsfPMnRCTQoAAUxsuM7kamtebR3HYysvb65l7njLfOqH9X14hiPivI0wAAAABJRU5ErkJggg==", alt="Item icon image")
-            .item-title
-              h2 A title for the item
-            .item-description
-              p A description for the item, normally this should be at least 200 characters length, but it could variate.
-            .item-button
-              a(href="#") Link to something
-          .item
-            .item-info
-              img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAA5FBMVEUAAAB/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1Kf373AAAAS3RSTlMAAQIDBAUGBwkMDRARFiAhIyQuMTIzNTY3OD0+QERFSUtMTVFrcHFzdHV3eX5/gIyVl6OmtLW3ur7AwcPFx8jR09XX2d7g4ujt7/HgnHODAAAA5UlEQVQoz3VS1RbCMAwNsg4dw91lyHAYXtz//3/YgKwFRh56knuTGzkFeJkr3VteD6NqwAa8ieqy5HOCTQw2dzEOl7dh0xdaAwf6qQnhy2P0HUqTT12QtScgbAh8WVEx3loUEy9JZGZuAEIxit/L6EodgETJVHAysQNA1wcWpvphZseAniqsfQjOTOneYrtk/xNzuxWhS7HmPKE3Z+PyhD4uWVkQxoJQw5PT0z73dqce44jrnyPmlVed9nX2AAIpTeDxCDUlgpuQCQuNoYMlie1Fwat/BiLXd4lPXVemT2/HsSJjvwcR+xXA+PPomQAAAABJRU5ErkJggg==", alt="Item information icon")
-            .item-icon
-              img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAABxVBMVEUAAAAhq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq83FuPSKAAAAlnRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRscHR4fICEjJCUnKCwtLzAxMzY5Ojs9Pj9BQkNESUtMT1BRVVZXW1xdX2JjZmdpa2xtb3Bxc3R1eHl7fH+AgoOFiImLjI6Ul5iam52io6aoqqutr7K0tbe5ury+wMHDxcjKzM7P0dPV19rc3uDi5Obo6evt7/Hz9ff5+/1cD2ZRAAACO0lEQVQ4jX2T/T9TYRjGv2dnM2zZYlTWC5aXiqSolBBJIb0oIVIpkkSkomSj5aXNXs/99/bD2eFMm+uX57qf8/1c9/N87ucAKBcng9Ffzyswy97ycSuy0utOlc61pQsu5+lhmTcxvuTGFU/+ie5kJwB5oR4A7ia95qSJbQeAe+s+wOIrANqkWs/1dwCgzG3kAhRpFeDT7ADXpBHA7n0rUuVSAPXHmg2gZxmGxgHq5TbYWlZEQt8DSYmOnAF7cFkFCsSJvxGokXEsXYmZq0cAUMv7dr6UclQWLEC8mlgNVGihUH1gusR0bsuN3f6nsdgHBdYb2LiEN/HSEkjWkS7brNQdj75TiJ5jbKA49oLOzWLjo3pe0Y3yOJhXEhl3iJvKcHiYy3+dewluyTHsw1XVs/v7J7A4iCt5kkwQ70cpDFUCObBwj8yQPVZGrm59ETULROuS4Sa7yAZZNU/KSFFWiAn9FVAeJTvU9FVfm+cOgU5p+to3eghUkKoGnx0C5Us+AA/0JEXV5T2QZAeg9RMAA2Io7UyiT7JOv53jmCFz86aIkVhIVr0ZS5nNO1kZq1abch1ps0vTrbg15Wzx7iyMPbrfpENKM0NTYdueVxZ2HJmYXjlrqvK0P0X/M/3yxFxej4cTtQcQ24xsrVv3a59UOVZlymNClOawtFs+zyrGhivaBkqfyHSj/tOoZT3b4veCLThkQPP6hF0jmojsfPMnRCTQoAAUxsuM7kamtebR3HYysvb65l7njLfOqH9X14hiPivI0wAAAABJRU5ErkJggg==", alt="Item icon image")
-            .item-title
-              h2 A title for the item
-            .item-description
-              p A description for the item, normally this should be at least 200 characters length, but it could variate.
-            .item-button
-              a(href="#") Link to something
-          .item
-            .item-info
-              img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAA5FBMVEUAAAB/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1Kf373AAAAS3RSTlMAAQIDBAUGBwkMDRARFiAhIyQuMTIzNTY3OD0+QERFSUtMTVFrcHFzdHV3eX5/gIyVl6OmtLW3ur7AwcPFx8jR09XX2d7g4ujt7/HgnHODAAAA5UlEQVQoz3VS1RbCMAwNsg4dw91lyHAYXtz//3/YgKwFRh56knuTGzkFeJkr3VteD6NqwAa8ieqy5HOCTQw2dzEOl7dh0xdaAwf6qQnhy2P0HUqTT12QtScgbAh8WVEx3loUEy9JZGZuAEIxit/L6EodgETJVHAysQNA1wcWpvphZseAniqsfQjOTOneYrtk/xNzuxWhS7HmPKE3Z+PyhD4uWVkQxoJQw5PT0z73dqce44jrnyPmlVed9nX2AAIpTeDxCDUlgpuQCQuNoYMlie1Fwat/BiLXd4lPXVemT2/HsSJjvwcR+xXA+PPomQAAAABJRU5ErkJggg==", alt="Item information icon")
-            .item-icon
-              img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAABxVBMVEUAAAAhq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq83FuPSKAAAAlnRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRscHR4fICEjJCUnKCwtLzAxMzY5Ojs9Pj9BQkNESUtMT1BRVVZXW1xdX2JjZmdpa2xtb3Bxc3R1eHl7fH+AgoOFiImLjI6Ul5iam52io6aoqqutr7K0tbe5ury+wMHDxcjKzM7P0dPV19rc3uDi5Obo6evt7/Hz9ff5+/1cD2ZRAAACO0lEQVQ4jX2T/T9TYRjGv2dnM2zZYlTWC5aXiqSolBBJIb0oIVIpkkSkomSj5aXNXs/99/bD2eFMm+uX57qf8/1c9/N87ucAKBcng9Ffzyswy97ycSuy0utOlc61pQsu5+lhmTcxvuTGFU/+ie5kJwB5oR4A7ia95qSJbQeAe+s+wOIrANqkWs/1dwCgzG3kAhRpFeDT7ADXpBHA7n0rUuVSAPXHmg2gZxmGxgHq5TbYWlZEQt8DSYmOnAF7cFkFCsSJvxGokXEsXYmZq0cAUMv7dr6UclQWLEC8mlgNVGihUH1gusR0bsuN3f6nsdgHBdYb2LiEN/HSEkjWkS7brNQdj75TiJ5jbKA49oLOzWLjo3pe0Y3yOJhXEhl3iJvKcHiYy3+dewluyTHsw1XVs/v7J7A4iCt5kkwQ70cpDFUCObBwj8yQPVZGrm59ETULROuS4Sa7yAZZNU/KSFFWiAn9FVAeJTvU9FVfm+cOgU5p+to3eghUkKoGnx0C5Us+AA/0JEXV5T2QZAeg9RMAA2Io7UyiT7JOv53jmCFz86aIkVhIVr0ZS5nNO1kZq1abch1ps0vTrbg15Wzx7iyMPbrfpENKM0NTYdueVxZ2HJmYXjlrqvK0P0X/M/3yxFxej4cTtQcQ24xsrVv3a59UOVZlymNClOawtFs+zyrGhivaBkqfyHSj/tOoZT3b4veCLThkQPP6hF0jmojsfPMnRCTQoAAUxsuM7kamtebR3HYysvb65l7njLfOqH9X14hiPivI0wAAAABJRU5ErkJggg==", alt="Item icon image")
-            .item-title
-              h2 A title for the item
-            .item-description
-              p A description for the item, normally this should be at least 200 characters length, but it could variate.
-            .item-button
-              a(href="#") Link to something
-          .item
-            .item-info
-              img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAA5FBMVEUAAAB/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1Kf373AAAAS3RSTlMAAQIDBAUGBwkMDRARFiAhIyQuMTIzNTY3OD0+QERFSUtMTVFrcHFzdHV3eX5/gIyVl6OmtLW3ur7AwcPFx8jR09XX2d7g4ujt7/HgnHODAAAA5UlEQVQoz3VS1RbCMAwNsg4dw91lyHAYXtz//3/YgKwFRh56knuTGzkFeJkr3VteD6NqwAa8ieqy5HOCTQw2dzEOl7dh0xdaAwf6qQnhy2P0HUqTT12QtScgbAh8WVEx3loUEy9JZGZuAEIxit/L6EodgETJVHAysQNA1wcWpvphZseAniqsfQjOTOneYrtk/xNzuxWhS7HmPKE3Z+PyhD4uWVkQxoJQw5PT0z73dqce44jrnyPmlVed9nX2AAIpTeDxCDUlgpuQCQuNoYMlie1Fwat/BiLXd4lPXVemT2/HsSJjvwcR+xXA+PPomQAAAABJRU5ErkJggg==", alt="Item information icon")
-            .item-icon
-              img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAABxVBMVEUAAAAhq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq83FuPSKAAAAlnRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRscHR4fICEjJCUnKCwtLzAxMzY5Ojs9Pj9BQkNESUtMT1BRVVZXW1xdX2JjZmdpa2xtb3Bxc3R1eHl7fH+AgoOFiImLjI6Ul5iam52io6aoqqutr7K0tbe5ury+wMHDxcjKzM7P0dPV19rc3uDi5Obo6evt7/Hz9ff5+/1cD2ZRAAACO0lEQVQ4jX2T/T9TYRjGv2dnM2zZYlTWC5aXiqSolBBJIb0oIVIpkkSkomSj5aXNXs/99/bD2eFMm+uX57qf8/1c9/N87ucAKBcng9Ffzyswy97ycSuy0utOlc61pQsu5+lhmTcxvuTGFU/+ie5kJwB5oR4A7ia95qSJbQeAe+s+wOIrANqkWs/1dwCgzG3kAhRpFeDT7ADXpBHA7n0rUuVSAPXHmg2gZxmGxgHq5TbYWlZEQt8DSYmOnAF7cFkFCsSJvxGokXEsXYmZq0cAUMv7dr6UclQWLEC8mlgNVGihUH1gusR0bsuN3f6nsdgHBdYb2LiEN/HSEkjWkS7brNQdj75TiJ5jbKA49oLOzWLjo3pe0Y3yOJhXEhl3iJvKcHiYy3+dewluyTHsw1XVs/v7J7A4iCt5kkwQ70cpDFUCObBwj8yQPVZGrm59ETULROuS4Sa7yAZZNU/KSFFWiAn9FVAeJTvU9FVfm+cOgU5p+to3eghUkKoGnx0C5Us+AA/0JEXV5T2QZAeg9RMAA2Io7UyiT7JOv53jmCFz86aIkVhIVr0ZS5nNO1kZq1abch1ps0vTrbg15Wzx7iyMPbrfpENKM0NTYdueVxZ2HJmYXjlrqvK0P0X/M/3yxFxej4cTtQcQ24xsrVv3a59UOVZlymNClOawtFs+zyrGhivaBkqfyHSj/tOoZT3b4veCLThkQPP6hF0jmojsfPMnRCTQoAAUxsuM7kamtebR3HYysvb65l7njLfOqH9X14hiPivI0wAAAABJRU5ErkJggg==", alt="Item icon image")
-            .item-title
-              h2 A title for the item
-            .item-description
-              p A description for the item, normally this should be at least 200 characters length, but it could variate.
-            .item-button
-              a(href="#") Link to something
-          .item
-            .item-info
-              img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAA5FBMVEUAAAB/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1Kf373AAAAS3RSTlMAAQIDBAUGBwkMDRARFiAhIyQuMTIzNTY3OD0+QERFSUtMTVFrcHFzdHV3eX5/gIyVl6OmtLW3ur7AwcPFx8jR09XX2d7g4ujt7/HgnHODAAAA5UlEQVQoz3VS1RbCMAwNsg4dw91lyHAYXtz//3/YgKwFRh56knuTGzkFeJkr3VteD6NqwAa8ieqy5HOCTQw2dzEOl7dh0xdaAwf6qQnhy2P0HUqTT12QtScgbAh8WVEx3loUEy9JZGZuAEIxit/L6EodgETJVHAysQNA1wcWpvphZseAniqsfQjOTOneYrtk/xNzuxWhS7HmPKE3Z+PyhD4uWVkQxoJQw5PT0z73dqce44jrnyPmlVed9nX2AAIpTeDxCDUlgpuQCQuNoYMlie1Fwat/BiLXd4lPXVemT2/HsSJjvwcR+xXA+PPomQAAAABJRU5ErkJggg==", alt="Item information icon")
-            .item-icon
-              img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAABxVBMVEUAAAAhq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq83FuPSKAAAAlnRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRscHR4fICEjJCUnKCwtLzAxMzY5Ojs9Pj9BQkNESUtMT1BRVVZXW1xdX2JjZmdpa2xtb3Bxc3R1eHl7fH+AgoOFiImLjI6Ul5iam52io6aoqqutr7K0tbe5ury+wMHDxcjKzM7P0dPV19rc3uDi5Obo6evt7/Hz9ff5+/1cD2ZRAAACO0lEQVQ4jX2T/T9TYRjGv2dnM2zZYlTWC5aXiqSolBBJIb0oIVIpkkSkomSj5aXNXs/99/bD2eFMm+uX57qf8/1c9/N87ucAKBcng9Ffzyswy97ycSuy0utOlc61pQsu5+lhmTcxvuTGFU/+ie5kJwB5oR4A7ia95qSJbQeAe+s+wOIrANqkWs/1dwCgzG3kAhRpFeDT7ADXpBHA7n0rUuVSAPXHmg2gZxmGxgHq5TbYWlZEQt8DSYmOnAF7cFkFCsSJvxGokXEsXYmZq0cAUMv7dr6UclQWLEC8mlgNVGihUH1gusR0bsuN3f6nsdgHBdYb2LiEN/HSEkjWkS7brNQdj75TiJ5jbKA49oLOzWLjo3pe0Y3yOJhXEhl3iJvKcHiYy3+dewluyTHsw1XVs/v7J7A4iCt5kkwQ70cpDFUCObBwj8yQPVZGrm59ETULROuS4Sa7yAZZNU/KSFFWiAn9FVAeJTvU9FVfm+cOgU5p+to3eghUkKoGnx0C5Us+AA/0JEXV5T2QZAeg9RMAA2Io7UyiT7JOv53jmCFz86aIkVhIVr0ZS5nNO1kZq1abch1ps0vTrbg15Wzx7iyMPbrfpENKM0NTYdueVxZ2HJmYXjlrqvK0P0X/M/3yxFxej4cTtQcQ24xsrVv3a59UOVZlymNClOawtFs+zyrGhivaBkqfyHSj/tOoZT3b4veCLThkQPP6hF0jmojsfPMnRCTQoAAUxsuM7kamtebR3HYysvb65l7njLfOqH9X14hiPivI0wAAAABJRU5ErkJggg==", alt="Item icon image")
-            .item-title
-              h2 A title for the item
-            .item-description
-              p A description for the item, normally this should be at least 200 characters length, but it could variate.
-            .item-button
-              a(href="#") Link to something
-          .item
-            .item-info
-              img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAA5FBMVEUAAAB/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1/jI1Kf373AAAAS3RSTlMAAQIDBAUGBwkMDRARFiAhIyQuMTIzNTY3OD0+QERFSUtMTVFrcHFzdHV3eX5/gIyVl6OmtLW3ur7AwcPFx8jR09XX2d7g4ujt7/HgnHODAAAA5UlEQVQoz3VS1RbCMAwNsg4dw91lyHAYXtz//3/YgKwFRh56knuTGzkFeJkr3VteD6NqwAa8ieqy5HOCTQw2dzEOl7dh0xdaAwf6qQnhy2P0HUqTT12QtScgbAh8WVEx3loUEy9JZGZuAEIxit/L6EodgETJVHAysQNA1wcWpvphZseAniqsfQjOTOneYrtk/xNzuxWhS7HmPKE3Z+PyhD4uWVkQxoJQw5PT0z73dqce44jrnyPmlVed9nX2AAIpTeDxCDUlgpuQCQuNoYMlie1Fwat/BiLXd4lPXVemT2/HsSJjvwcR+xXA+PPomQAAAABJRU5ErkJggg==", alt="Item information icon")
-            .item-icon
-              img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAABxVBMVEUAAAAhq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq80hq83FuPSKAAAAlnRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRscHR4fICEjJCUnKCwtLzAxMzY5Ojs9Pj9BQkNESUtMT1BRVVZXW1xdX2JjZmdpa2xtb3Bxc3R1eHl7fH+AgoOFiImLjI6Ul5iam52io6aoqqutr7K0tbe5ury+wMHDxcjKzM7P0dPV19rc3uDi5Obo6evt7/Hz9ff5+/1cD2ZRAAACO0lEQVQ4jX2T/T9TYRjGv2dnM2zZYlTWC5aXiqSolBBJIb0oIVIpkkSkomSj5aXNXs/99/bD2eFMm+uX57qf8/1c9/N87ucAKBcng9Ffzyswy97ycSuy0utOlc61pQsu5+lhmTcxvuTGFU/+ie5kJwB5oR4A7ia95qSJbQeAe+s+wOIrANqkWs/1dwCgzG3kAhRpFeDT7ADXpBHA7n0rUuVSAPXHmg2gZxmGxgHq5TbYWlZEQt8DSYmOnAF7cFkFCsSJvxGokXEsXYmZq0cAUMv7dr6UclQWLEC8mlgNVGihUH1gusR0bsuN3f6nsdgHBdYb2LiEN/HSEkjWkS7brNQdj75TiJ5jbKA49oLOzWLjo3pe0Y3yOJhXEhl3iJvKcHiYy3+dewluyTHsw1XVs/v7J7A4iCt5kkwQ70cpDFUCObBwj8yQPVZGrm59ETULROuS4Sa7yAZZNU/KSFFWiAn9FVAeJTvU9FVfm+cOgU5p+to3eghUkKoGnx0C5Us+AA/0JEXV5T2QZAeg9RMAA2Io7UyiT7JOv53jmCFz86aIkVhIVr0ZS5nNO1kZq1abch1ps0vTrbg15Wzx7iyMPbrfpENKM0NTYdueVxZ2HJmYXjlrqvK0P0X/M/3yxFxej4cTtQcQ24xsrVv3a59UOVZlymNClOawtFs+zyrGhivaBkqfyHSj/tOoZT3b4veCLThkQPP6hF0jmojsfPMnRCTQoAAUxsuM7kamtebR3HYysvb65l7njLfOqH9X14hiPivI0wAAAABJRU5ErkJggg==", alt="Item icon image")
-            .item-title
-              h2 A title for the item
-            .item-description
-              p A description for the item, normally this should be at least 200 characters length, but it could variate.
-            .item-button
-              a(href="#") Link to something
+	.dashboard
+		include ../partials/nav
+		main.content
+			.top
+				.left
+					p A text in the left
+				.right
+					p The icon in the right
+			.items
+				h1.items-title A title for these items
+				.items-grid.items-card
+					.item
+						.item-info
+							img(src="", alt="Item information icon")
+						.item-icon
+							img(src="", alt="Item icon image")
+						.item-title
+							h2 A title for the item
+						.item-description
+							p A description for the item, normally this should be at least 200 characters length, but it could variate.
+						.item-button
+							a(href="#") Link to something
+		
