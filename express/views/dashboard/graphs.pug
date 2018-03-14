@@ -2,16 +2,16 @@ extends ../layout
 
 block content
 	.dashboard
-		include ../partials/nav
-		main.content
+		include ../partials/sidebar
+		main.main
 			.top
 				.left
 					p A text in the left
 				.right
 					p The icon in the right
-			.items
-				h1.items-title A title for these items
-				.items-grid.items-graphs
+			.content
+				h1.content-title A title for these items
+				.items-grid.items-graphs.grid-50
 					.item
 						canvas(id="myChart")
 block scripts

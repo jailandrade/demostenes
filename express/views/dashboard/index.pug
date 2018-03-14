@@ -2,17 +2,17 @@ extends ../layout
 
 block content
 	.dashboard
-		include ../partials/nav
-		main.content
+		include ../partials/sidebar
+		main.main
 			.top
 				.left
 					p A text in the left
 				.right
 					p The icon in the right
-			.items
-				h1.items-title A title for these items
-				.items-grid.items-card
-					.item
+			.content
+				h1.content-title A title for these items
+				.items-grid.items-card.grid-33
+					.item.card-simple
 						.item-info
 							img(src="", alt="Item information icon")
 						.item-icon
@@ -22,5 +22,27 @@ block content
 						.item-description
 							p A description for the item, normally this should be at least 200 characters length, but it could variate.
 						.item-button
-							a(href="#") Link to something
+							a.btn.btn-normal.btn--ok(href="#") Link to something
+					.item.card-simple
+						.item-info
+							img(src="", alt="Item information icon")
+						.item-icon
+							img(src="", alt="Item icon image")
+						.item-title
+							h2 A title for the item
+						.item-description
+							p A description for the item, normally this should be at least 200 characters length, but it could variate.
+						.item-button
+							a.btn.btn-normal.btn--danger(href="#") Link to something
+					.item.card-simple
+						.item-info
+							img(src="", alt="Item information icon")
+						.item-icon
+							img(src="", alt="Item icon image")
+						.item-title
+							h2 A title for the item
+						.item-description
+							p A description for the item, normally this should be at least 200 characters length, but it could variate.
+						.item-button
+							a.btn.btn-normal.btn--warning(href="#") Link to something
 		
