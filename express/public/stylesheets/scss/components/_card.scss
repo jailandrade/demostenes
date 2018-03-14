@@ -1,0 +1,32 @@
+.items-card {
+	.item {
+		background-color: #fff;
+		text-align: center;
+		color: #332;	
+	}
+
+	.card-simple {
+		.item-info {
+			position: absolute;
+			top: 1em;
+			right: 1em;
+		}
+		.item-icon {
+			img {
+				margin: 1em auto 2em;
+				width: 36px;
+				display: block;
+			}
+		}
+		.item-title {
+			margin-bottom: 2em;
+		}
+		.item-description {
+			margin-bottom: 2em;
+		}
+		.item-button {
+			margin: 1em 0;
+		}
+	}
+}
+
