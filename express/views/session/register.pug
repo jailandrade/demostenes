@@ -1,15 +1,18 @@
 extends ../layout
 
 block content
-  form(action="/login" method="post")
-    div
-      label(for="name") Name
-      input(type="text") 
-    div
-      label(for="email") Email
-      input(type="email")
-    div
-      label(for="password") Password
-      input(type="password")
-    div
-      input(type="submit" value="Login")
+	.register
+		form.form-register(action="/register" method="post")
+			h1 Sign Up
+			div.form-group
+				label(for="name") Email
+				input(type="text" name="name" required)
+			div.form-group
+				label(for="email") Email
+				input(type="email" name="email" required)
+			div.form-group
+				label(for="password") Password
+				input(type="password" name="password" required)
+			div.form-group
+				input(type="submit" value="Register")
+

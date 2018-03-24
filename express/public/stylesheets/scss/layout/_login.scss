@@ -1,0 +1,20 @@
+.login {
+	background-color: #F5F8FA;
+	padding: 2em;
+	.form-login {
+		display: block;
+		width: 300px;
+		margin: 10em auto;
+		.form-group {
+			input {
+				width: 100%;
+				padding: 0.3em;
+
+			}
+			input[type="submit"] {
+				width: 50%;
+				margin: 0.5em auto;
+			}
+		}
+	}
+}
