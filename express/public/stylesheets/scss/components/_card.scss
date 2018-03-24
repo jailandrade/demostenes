@@ -12,9 +12,14 @@
 			right: 1em;
 		}
 		.item-icon {
+			i {
+				margin: 1em auto;
+				font-size: 40px;
+				display: block;
+			}
 			img {
-				margin: 1em auto 2em;
-				width: 36px;
+				margin: 1em auto;
+				height: 40px;
 				display: block;
 			}
 		}

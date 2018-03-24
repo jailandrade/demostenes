@@ -10,15 +10,15 @@ block content
 				.right
 					p The icon in the right
 			.content
-				h1.content-title A title for these items
-				.items-grid.items-graphs.grid-50
+				h1.content-title A couple of graphs
+				.items-grid.items-graphs.grid-33
 					.item
-						canvas(id="myChart")
+						canvas(id="chartBars")
 block scripts
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js")
 	script.
-		var chart = document.getElementById('myChart')
-		var myChart = new Chart(chart, {
+		var chart_bars = document.getElementById('chartBars')
+		var chartBars = new Chart(chart_bars, {
 			type: 'bar',
 			data: {
 				labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
