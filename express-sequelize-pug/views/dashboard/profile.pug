@@ -1,0 +1,37 @@
+extends ../layout
+
+block content
+	.dashboard
+		include ../partials/sidebar
+		main.main
+			.top
+				.left
+					p A text in the left
+				.right
+					p The icon in the right
+			.content
+				.profile
+					.profile-header
+						.profile-thumbnail
+							img(src="/images/user_avatar.png", alt="User Avatar")
+						.profile-heading
+							h1 Username
+							p A little description for this user. This is a little description you can change in views/dashboard/profile
+					.profile-content
+						.profile-tabs
+							input(type="radio" id="tab1" name="tabs" checked)
+							label(for="tab1") Tab 1
+							input(type="radio" id="tab2" name="tabs")
+							label(for="tab2") Tab 2						
+							input(type="radio" id="tab3" name="tabs")
+							label(for="tab3") Tab 3
+							section.section-tab#sectiontab1
+								h1 Tab 1
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur quisquam rerum nulla quasi ipsam impedit totam, obcaecati quo delectus tempora distinctio officia animi porro, fuga molestiae aspernatur magni ea?
+							section.section-tab#sectiontab2
+								h1 Tab 2
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur quisquam rerum nulla quasi ipsam impedit totam, obcaecati quo delectus tempora distinctio officia animi porro, fuga molestiae aspernatur magni ea?
+							section.section-tab#sectiontab3
+								h1 Tab 3
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur quisquam rerum nulla quasi ipsam impedit totam, obcaecati quo delectus tempora distinctio officia animi porro, fuga molestiae aspernatur magni ea?
+					.profile-footer

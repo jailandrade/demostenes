@@ -1,0 +1,48 @@
+extends ../layout
+
+block content
+	.dashboard
+		include ../partials/sidebar
+		main.main
+			.top
+				.left
+					p A text in the left
+				.right
+					p The icon in the right
+			.content
+				h1.content-title A title for these items
+				.items-grid.items-card.grid-33
+					.item.card-simple
+						.item-info
+							i.fa.fa-info
+						.item-icon
+							i.fa.fa-square
+						.item-title
+							h2 A title for the item
+						.item-description
+							p A description for the item, normally this should be at least 200 characters length, but it could variate.
+						.item-button
+							a.btn.btn-normal.btn--ok(href="#") Link to something
+					.item.card-simple
+						.item-info
+							i.fa.fa-info
+						.item-icon
+							i.fa.fa-square
+						.item-title
+							h2 A title for the item
+						.item-description
+							p A description for the item, normally this should be at least 200 characters length, but it could variate.
+						.item-button
+							a.btn.btn-normal.btn--danger(href="#") Link to something
+					.item.card-simple
+						.item-info
+							i.fa.fa-info
+						.item-icon
+							i.fa.fa-square
+						.item-title
+							h2 A title for the item
+						.item-description
+							p A description for the item, normally this should be at least 200 characters length, but it could variate.
+						.item-button
+							a.btn.btn-normal.btn--warning(href="#") Link to something
+		
