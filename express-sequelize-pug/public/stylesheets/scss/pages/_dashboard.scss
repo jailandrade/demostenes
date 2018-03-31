@@ -2,3 +2,9 @@
   display: grid;
   grid-template-columns: 15% 85%;
 }
+
+@media screen and (max-width: 900px) {
+	.dashboard {
+		grid-template-columns: 10% 90%;
+	}
+}

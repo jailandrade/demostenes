@@ -86,3 +86,34 @@
 		}
 	}
 }
+
+
+@media screen and (max-width: 900px) {
+	.sidebar {
+		.items {
+			.nav-item {
+				a {
+					display: none;
+				}
+			}
+		}
+		.bottom {
+			a {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-widht: 500px) {
+	.sidebar {
+		.items {
+			.nav-item {
+				padding: 0.5em;
+				i {
+					font-size: 1.1em;
+				}
+			}
+		}
+	}
+}

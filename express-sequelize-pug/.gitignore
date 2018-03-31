@@ -28,4 +28,8 @@ benchmarks/graphs
 .sass-cache/
 *.css.map
 
+# For API keys
 .env
+
+# For Sequelize integration
+config/config.json

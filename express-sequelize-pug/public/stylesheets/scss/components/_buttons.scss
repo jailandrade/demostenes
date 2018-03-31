@@ -29,10 +29,10 @@
 .btn--warning {
 	border-color: transparent;
 	background-color: #ffe135;
-	color: #fff;
+	color: #444;
 	&:hover {
 		background-color: transparent;
-		border-color: #ffe135;
+		border: 1px solid #ffe135;
 		color: #ffe135;
 	}
 }
@@ -43,7 +43,7 @@
 	color: #fff;
 	&:hover {
 		background-color: transparent;
-		border-color: #e30022;
+		border:1px solid #e30022;
 		color: #e30022;
 	}
 }
