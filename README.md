@@ -2,4 +2,4 @@
 
 A serie of web applications for demo use.
 
-Please read the instructions for each folder.
+**This is an old repo and is not longer mantained only for reference purpos**
